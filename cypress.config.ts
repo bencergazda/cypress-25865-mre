@@ -11,7 +11,7 @@ export default defineConfig({
           process.env.NODE_ENV = "test";
           process.env.BABEL_ENV = "test";
 
-          const webpackConfig = require("react-app-rewired/config/webpack.config")("test");
+          const webpackConfig = require("react-scripts/config/webpack.config")("test");
 
           return webpackConfig;
         },
