@@ -8,10 +8,10 @@ export default defineConfig({
         ...devServerOptions,
         framework: "react",
         webpackConfig: () => {
-          process.env.NODE_ENV = "development";
-          process.env.BABEL_ENV = "development";
+          process.env.NODE_ENV = "test";
+          process.env.BABEL_ENV = "test";
 
-          const webpackConfig = require("react-app-rewired/config/webpack.config")("development");
+          const webpackConfig = require("react-app-rewired/config/webpack.config")("test");
 
           return webpackConfig;
         },
