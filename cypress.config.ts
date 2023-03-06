@@ -8,9 +8,6 @@ export default defineConfig({
         ...devServerOptions,
         framework: "react",
         webpackConfig: () => {
-          process.env.NODE_ENV = "test";
-          process.env.BABEL_ENV = "test";
-
           const webpackConfig = require("react-scripts/config/webpack.config")("test");
 
           return webpackConfig;
